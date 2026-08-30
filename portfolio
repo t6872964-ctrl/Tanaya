@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tanya Kumari | Portfolio</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --blue: #168cff;
+            --light-blue: #57b7ff;
+            --dark-blue: #0759ad;
+            --black: #02060c;
+            --dark: #06111f;
+            --dark-card: #0b1420;
+            --text: #eaf2ff;
+            --gray: #aab7c6;
+            --border: #1a3550;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: var(--black);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 7%;
+
+            background: rgba(2, 6, 12, 0.97);
+            border-bottom: 1px solid rgba(22, 140, 255, 0.25);
+
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: white;
+        }
+
+        .logo span {
+            color: var(--light-blue);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        nav ul a {
+            color: #b7c2cf;
+            font-size: 12px;
+            transition: 0.3s;
+        }
+
+        nav ul a:hover {
+            color: var(--light-blue);
+        }
+
+        .nav-cv {
+            background: var(--blue);
+            color: white !important;
+            padding: 8px 13px;
+            border-radius: 7px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            padding: 95px 8% 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 45px;
+
+            background:
+                radial-gradient(
+                    circle at 15% 50%,
+                    rgba(22, 140, 255, 0.20),
+                    transparent 32%
+                ),
+                linear-gradient(
+                    180deg,
+                    #06111f,
+                    #02060c
+                );
+        }
+
+        .profile-circle {
+            width: 270px;
+            height: 270px;
+            padding: 6px;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--light-blue),
+                    var(--dark-blue)
+                );
+
+            box-shadow:
+                0 0 25px rgba(22, 140, 255, 0.6);
+        }
+
+        .profile-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hello {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .first-name {
+            color: var(--light-blue);
+        }
+
+        .last-name {
+            color: white;
+        }
+
+        .hero p {
+            color: var(--gray);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 7px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 11px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--light-blue),
+                    var(--dark-blue)
+                );
+
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 10px 25px rgba(22, 140, 255, 0.35);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--blue);
+            color: var(--light-blue);
+        }
+
+        .btn-outline:hover {
+            background: var(--blue);
+            color: white;
+        }
+
+
+        /* =========================
+           GENERAL SECTION
+        ========================== */
+
+        section {
+            padding: 45px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .section-title small {
+            color: var(--light-blue);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 30px;
+            margin-top: 5px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            font-size: 13px;
+            margin-top: 6px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            background: var(--dark);
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+
+            gap: 25px;
+            align-items: center;
+        }
+
+        .about-card {
+            background: var(--dark-card);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 22px;
+        }
+
+        .about-card i {
+            color: var(--light-blue);
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .about-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .about-card p,
+        .about-text p {
+            color: var(--gray);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .about-text h3 {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 15px;
+        }
+
+        .skill-card {
+            background: var(--dark-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--blue);
+        }
+
+        .skill-card i {
+            color: var(--light-blue);
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .skill-card h3 {
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+
+        .skill-card p {
+            color: var(--gray);
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           TECHNICAL SKILLS
+        ========================== */
+
+        .technical-skills {
+            background: var(--dark);
+        }
+
+        .skills-category {
+            background: var(--dark-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 10px;
+        }
+
+        .skills-category h3 {
+            color: var(--light-blue);
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            padding: 7px 12px;
+
+            background:
+                rgba(22, 140, 255, 0.10);
+
+            border:
+                1px solid rgba(22, 140, 255, 0.4);
+
+            border-radius: 20px;
+
+            color: #d8ecff;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 18px;
+        }
+
+        .project-card {
+            background: var(--dark-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--blue);
+        }
+
+        .project-icon {
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background:
+                rgba(22, 140, 255, 0.12);
+
+            margin-bottom: 12px;
+        }
+
+        .project-icon i {
+            color: var(--light-blue);
+            font-size: 22px;
+        }
+
+        .project-card h3 {
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+
+        .project-date {
+            color: var(--light-blue);
+            font-size: 11px;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: var(--gray);
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 7px;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================== */
+
+        .education {
+            background: var(--dark);
+        }
+
+        .education-container {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .education-card {
+            background: var(--dark-card);
+
+            border-left:
+                4px solid var(--blue);
+
+            border-radius: 10px;
+
+            padding: 16px;
+            margin-bottom: 10px;
+        }
+
+        .education-card h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .education-card h4 {
+            color: var(--light-blue);
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .education-card p {
+            color: var(--gray);
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           CV SECTION
+        ========================== */
+
+        .cv-section {
+            background: var(--black);
+        }
+
+        .cv-container {
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .cv-image-wrapper {
+            background: var(--dark-card);
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            padding: 10px;
+
+            max-height: 480px;
+            overflow: hidden;
+        }
+
+        .cv-image-wrapper img {
+            width: 100%;
+            height: 450px;
+
+            object-fit: contain;
+
+            display: block;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+        }
+
+        .cv-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 15px;
+        }
+
+
+        /* =========================
+           CERTIFICATES
+        ========================== */
+
+        .certificate-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(230px, 1fr));
+
+            gap: 15px;
+        }
+
+        .certificate-card {
+            background: var(--dark-card);
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+            overflow: hidden;
+
+            transition: 0.3s;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--blue);
+        }
+
+        .certificate-image {
+            height: 140px;
+            background: white;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .certificate-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .certificate-content {
+            padding: 15px;
+        }
+
+        .certificate-content h3 {
+            font-size: 14px;
+            margin-bottom: 7px;
+        }
+
+        .certificate-content p {
+            color: var(--gray);
+            font-size: 11px;
+        }
+
+        .certificate-content i {
+            color: var(--light-blue);
+        }
+
+        .certificate-buttons {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .certificate-buttons a {
+            flex: 1;
+
+            text-align: center;
+
+            padding: 8px;
+
+            border-radius: 7px;
+
+            font-size: 11px;
+        }
+
+        .view-btn {
+            border: 1px solid var(--blue);
+            color: var(--light-blue);
+        }
+
+        .download-btn {
+            background: var(--blue);
+            color: white;
+        }
+
+
+        /* =========================
+           ACHIEVEMENTS
+        ========================== */
+
+        .achievements {
+            background: var(--dark);
+        }
+
+        .achievement-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 15px;
+        }
+
+        .achievement-card {
+            background: var(--dark-card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            padding: 20px;
+
+            text-align: center;
+        }
+
+        .achievement-card i {
+            font-size: 32px;
+            color: var(--light-blue);
+            margin-bottom: 10px;
+        }
+
+        .achievement-card h3 {
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+
+        .achievement-card p {
+            color: var(--gray);
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-wrapper {
+            max-width: 1000px;
+            margin: auto;
+
+            background: var(--dark-card);
+
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--blue);
+
+            border-radius: 18px;
+
+            padding: 22px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+
+            padding: 12px 15px;
+
+            background: #07101a;
+
+            border: 1px solid var(--border);
+
+            border-radius: 8px;
+
+            color: white;
+
+            font-family: "Poppins", sans-serif;
+        }
+
+        .contact-form textarea {
+            min-height: 100px;
+        }
+
+        .contact-form button {
+            padding: 12px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--light-blue),
+                    var(--dark-blue)
+                );
+
+            color: white;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        .contact-info {
+            max-width: 1000px;
+
+            margin: 18px auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(180px, 1fr));
+
+            gap: 12px;
+        }
+
+        .contact-box {
+            background: var(--dark-card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+
+            padding: 15px;
+
+            text-align: center;
+        }
+
+        .contact-box i {
+            color: var(--light-blue);
+
+            font-size: 22px;
+
+            margin-bottom: 7px;
+        }
+
+        .contact-box h3 {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .contact-box a {
+            color: var(--gray);
+            font-size: 11px;
+            word-break: break-word;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #010306;
+
+            border-top: 1px solid #142030;
+
+            padding: 15px;
+
+            text-align: center;
+
+            color: #8491a0;
+
+            font-size: 12px;
+        }
+
+        footer span {
+            color: var(--light-blue);
+        }
+
+
+        /* =========================
+           IMAGE MODAL
+        ========================== */
+
+        .modal {
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background:
+                rgba(0, 0, 0, 0.95);
+
+            z-index: 5000;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+        }
+
+        .modal-content {
+            position: relative;
+
+            max-width: 900px;
+            width: 100%;
+
+            text-align: center;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 85vh;
+
+            border-radius: 8px;
+
+            border: 2px solid var(--blue);
+        }
+
+        .close {
+            position: absolute;
+
+            right: 0;
+            top: -45px;
+
+            color: white;
+
+            font-size: 35px;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media(max-width: 1050px) {
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 25px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media(max-width: 750px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                padding: 85px 6% 35px;
+            }
+
+            .profile-circle {
+                width: 220px;
+                height: 220px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            section {
+                padding: 38px 6%;
+            }
+
+            .cv-image-wrapper img {
+                height: 380px;
+            }
+
+            .cv-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            Tanya<span>.</span>
+        </div>
+
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+
+            <!-- DOWNLOAD CV IMAGE -->
+            <li>
+                <a href="images/Tanya_Kumari_CV.jpg"
+                    download="Tanya_Kumari_CV.jpg"
+                    class="nav-cv">
+
+                    <i class="fa-solid fa-download"></i>
+                    CV
+
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="profile-circle">
+
+            <img src="images/tanya-profile.jpg"
+                alt="Tanya Kumari">
+
+        </div>
+
+
+        <div class="hero-content">
+
+            <div class="hello">
+                Hi, I'm
+            </div>
+
+
+            <h1>
+
+                <span class="first-name">Tanya</span>
+                <span class="last-name">Kumari</span>
+
+            </h1>
+
+
+            <p>
+                Computer Science and Engineering student
+                passionate about programming, web technologies,
+                database management, data management and
+                software development.
+            </p>
+
+
+            <p>
+                I enjoy building practical projects,
+                learning new technologies and improving
+                my technical skills.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#projects"
+                    class="btn btn-primary">
+
+                    <i class="fa-solid fa-code"></i>
+                    View Projects
+
+                </a>
+
+
+                <!-- VIEW CV IMAGE -->
+                <a href="images/Tanya_Kumari_CV.jpg"
+                    target="_blank"
+                    class="btn btn-outline">
+
+                    <i class="fa-solid fa-eye"></i>
+                    View CV
+
+                </a>
+
+
+                <!-- DOWNLOAD CV IMAGE -->
+                <a href="images/Tanya_Kumari_CV.jpg"
+                    download="Tanya_Kumari_CV.jpg"
+                    class="btn btn-primary">
+
+                    <i class="fa-solid fa-download"></i>
+                    Download CV
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="section-title">
+
+            <small>ABOUT ME</small>
+
+            <h2>
+                Know More About
+                <span style="color:#57b7ff;">Me</span>
+            </h2>
+
+        </div>
+
+
+        <div class="about-container">
+
+            <div class="about-card">
+
+                <i class="fa-solid fa-user-graduate"></i>
+
+                <h3>Tanya Kumari</h3>
+
+                <p>
+                    Computer Science and Engineering student
+                    focused on programming, web development,
+                    databases and practical technology projects.
+                </p>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <h3>Learning, Building & Growing</h3>
+
+                <p>
+                    I am a passionate technology learner
+                    with an interest in software development,
+                    programming, database technologies,
+                    data management and web development.
+                </p>
+
+                <br>
+
+                <p>
+                    I believe in continuous learning and
+                    improving my skills through projects,
+                    certifications and practical experience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+        <div class="section-title">
+
+            <small>MY EXPERTISE</small>
+
+            <h2>Technical Skills</h2>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <i class="fa-solid fa-code"></i>
+
+                <h3>Programming Languages</h3>
+
+                <p>
+                    Java, JavaScript, C,
+                    C++, PHP
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <i class="fa-solid fa-laptop-code"></i>
+
+                <h3>Web Technologies</h3>
+
+                <p>
+                    HTML, CSS, Bootstrap,
+                    Node.js
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <i class="fa-solid fa-database"></i>
+
+                <h3>Data Management</h3>
+
+                <p>
+                    MySQL, MongoDB,
+                    Database Management
+                    and Data Organization.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                <h3>Development Tools</h3>
+
+                <p>
+                    Git, GitHub and Figma
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TECH STACK ================= -->
+
+    <section class="technical-skills">
+
+        <div class="section-title">
+
+            <small>TECH STACK</small>
+
+            <h2>My Technical Knowledge</h2>
+
+        </div>
+
+
+        <div class="skills-category">
+
+            <h3>
+                <i class="fa-solid fa-code"></i>
+                Programming Languages
+            </h3>
+
+            <div class="skill-tags">
+
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">C</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">PHP</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skills-category">
+
+            <h3>
+                <i class="fa-solid fa-globe"></i>
+                Web Technologies
+            </h3>
+
+            <div class="skill-tags">
+
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">Bootstrap</span>
+                <span class="skill-tag">Node.js</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skills-category">
+
+            <h3>
+                <i class="fa-solid fa-database"></i>
+                Data Management & Databases
+            </h3>
+
+            <div class="skill-tags">
+
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Database Management</span>
+                <span class="skill-tag">Data Management</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skills-category">
+
+            <h3>
+                <i class="fa-solid fa-toolbox"></i>
+                Tools
+            </h3>
+
+            <div class="skill-tags">
+
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">Figma</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+        <div class="section-title">
+
+            <small>MY WORK</small>
+
+            <h2>Projects</h2>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <h3>Digital Timer Clock</h3>
+
+                <p class="project-date">
+                    Personal Project
+                </p>
+
+                <p>
+                    Developed an interactive digital timer
+                    clock with functionality for starting,
+                    pausing, resetting and tracking
+                    elapsed time.
+                </p>
+
+                <p>
+                    <strong style="color:#57b7ff;">
+                        Technologies:
+                    </strong>
+
+                    HTML, CSS, JavaScript
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-house-crack"></i>
+
+                </div>
+
+                <h3>
+                    Smart Real-Time Earthquake Detector
+                </h3>
+
+                <p class="project-date">
+                    Academic Project
+                </p>
+
+                <p>
+                    Designed a real-time earthquake
+                    detection system using an MPU6050
+                    sensor to monitor vibrations and motion.
+                </p>
+
+                <p>
+                    <strong style="color:#57b7ff;">
+                        Technologies:
+                    </strong>
+
+                    Arduino Uno, MPU6050,
+                    I2C LCD, Buzzer,
+                    LED, Embedded C/C++
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section class="education" id="education">
+
+        <div class="section-title">
+
+            <small>ACADEMIC JOURNEY</small>
+
+            <h2>Education</h2>
+
+        </div>
+
+
+        <div class="education-container">
+
+            <div class="education-card">
+
+                <h3>
+                    Lovely Professional University
+                </h3>
+
+                <h4>
+                    Phagwara, Punjab
+                </h4>
+
+                <p>
+                    Bachelor of Technology –
+                    Computer Science and Engineering
+                </p>
+
+                <p>CGPA: 7.60</p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>
+                    Gyan Jyoti Residential School
+                </h3>
+
+                <h4>
+                    Patna, Bihar
+                </h4>
+
+                <p>
+                    Higher Secondary Education
+                </p>
+
+                <p>Percentage: 67.7%</p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>
+                    St. Joseph's High School
+                </h3>
+
+                <h4>
+                    Patna, Bihar
+                </h4>
+
+                <p>
+                    Secondary Education
+                </p>
+
+                <p>Percentage: 85.5%</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CV SECTION ================= -->
+
+    <section class="cv-section" id="cv">
+
+        <div class="section-title">
+
+            <small>MY RESUME</small>
+
+            <h2>My CV</h2>
+
+            <p>
+                Click View CV to open the full CV image
+                or Download CV to save it.
+            </p>
+
+        </div>
+
+
+        <div class="cv-container">
+
+
+            <!-- CV IMAGE DISPLAY -->
+
+            <div class="cv-image-wrapper">
+
+                <img
+                    src="images/Tanya_Kumari_CV.jpg"
+                    alt="Tanya Kumari CV"
+                    onclick="openImage('images/Tanya_Kumari_CV.jpg')">
+
+            </div>
+
+
+            <div class="cv-buttons">
+
+
+                <!-- VIEW CV: OPENS CV IMAGE -->
+
+                <a
+                    href="images/Tanya_Kumari_CV.jpg"
+                    target="_blank"
+                    class="btn btn-outline">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    View CV
+
+                </a>
+
+
+                <!-- DOWNLOAD CV: DOWNLOADS SAME IMAGE -->
+
+                <a
+                    href="images/Tanya_Kumari_CV.jpg"
+                    download="Tanya_Kumari_CV.jpg"
+                    class="btn btn-primary">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download CV
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CERTIFICATES ================= -->
+
+    <section id="certificates">
+
+        <div class="section-title">
+
+            <small>MY CREDENTIALS</small>
+
+            <h2>Certificates</h2>
+
+            <p>
+                View or download my certificates.
+            </p>
+
+        </div>
+
+
+        <div class="certificate-grid">
+
+
+            <!-- CERTIFICATE 1 -->
+
+            <div class="certificate-card">
+
+                <div class="certificate-image"
+                    onclick="openImage('images/python-ust.jpg')">
+
+                    <img
+                        src="images/python-ust.jpg"
+                        alt="Python Certificate">
+
+                </div>
+
+                <div class="certificate-content">
+
+                    <h3>
+                        Create Your First Python Program
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-building"></i>
+                        UST / Coursera
+                    </p>
+
+                    <div class="certificate-buttons">
+
+                        <a href="images/python-ust.jpg"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+                            View
+
+                        </a>
+
+                        <a href="images/python-ust.jpg"
+                            download
+                            class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CERTIFICATE 2 -->
+
+            <div class="certificate-card">
+
+                <div class="certificate-image"
+                    onclick="openImage('images/generative-ai.jpg')">
+
+                    <img
+                        src="images/generative-ai.jpg"
+                        alt="Generative AI Certificate">
+
+                </div>
+
+                <div class="certificate-content">
+
+                    <h3>
+                        Introduction to Generative AI
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-building"></i>
+                        Google Cloud
+                    </p>
+
+                    <div class="certificate-buttons">
+
+                        <a href="images/generative-ai.jpg"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+                            View
+
+                        </a>
+
+                        <a href="images/generative-ai.jpg"
+                            download
+                            class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CERTIFICATE 3 -->
+
+            <div class="certificate-card">
+
+                <div class="certificate-image"
+                    onclick="openImage('images/time-management.jpg')">
+
+                    <img
+                        src="images/time-management.jpg"
+                        alt="Time Management Certificate">
+
+                </div>
+
+                <div class="certificate-content">
+
+                    <h3>
+                        Effective Time Management
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-building"></i>
+                        Professional Development
+                    </p>
+
+                    <div class="certificate-buttons">
+
+                        <a href="images/time-management.jpg"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+                            View
+
+                        </a>
+
+                        <a href="images/time-management.jpg"
+                            download
+                            class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CERTIFICATE 4 -->
+
+            <div class="certificate-card">
+
+                <div class="certificate-image"
+                    onclick="openImage('images/devops.jpg')">
+
+                    <img
+                        src="images/devops.jpg"
+                        alt="DevOps Certificate">
+
+                </div>
+
+                <div class="certificate-content">
+
+                    <h3>
+                        Mastering DevOps
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-building"></i>
+                        Infosys Springboard
+                    </p>
+
+                    <div class="certificate-buttons">
+
+                        <a href="images/devops.jpg"
+                            target="_blank"
+                            class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+                            View
+
+                        </a>
+
+                        <a href="images/devops.jpg"
+                            download
+                            class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+
+    <section class="achievements">
+
+        <div class="section-title">
+
+            <small>ACCOMPLISHMENTS</small>
+
+            <h2>Achievements</h2>
+
+        </div>
+
+
+        <div class="achievement-grid">
+
+            <div class="achievement-card">
+
+                <i class="fa-solid fa-medal"></i>
+
+                <h3>Science Olympiad</h3>
+
+                <p>
+                    Secured Rank 3
+                    in Science Olympiad.
+                </p>
+
+            </div>
+
+
+            <div class="achievement-card">
+
+                <i class="fa-solid fa-trophy"></i>
+
+                <h3>Craft Competition</h3>
+
+                <p>
+                    Secured Rank 1
+                    in Craft Competition.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <div class="section-title">
+
+            <small>GET IN TOUCH</small>
+
+            <h2>Contact Me</h2>
+
+        </div>
+
+
+        <div class="contact-wrapper">
+
+            <form class="contact-form"
+                onsubmit="sendMessage(event)">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required>
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Subject"
+                    required>
+
+                <textarea
+                    id="message"
+                    placeholder="Your Message"
+                    required></textarea>
+
+                <button type="submit">
+
+                    Send Message
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+
+            <div class="contact-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <h3>Email</h3>
+
+                <a href="mailto:t6872964@gmail.com">
+                    t6872964@gmail.com
+                </a>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <h3>Mobile</h3>
+
+                <a href="tel:+916299337709">
+                    +91 6299337709
+                </a>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <i class="fa-brands fa-github"></i>
+
+                <h3>GitHub</h3>
+
+                <a
+                    href="https://github.com/t6872964-ctrl"
+                    target="_blank">
+
+                    t6872964-ctrl
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <i class="fa-brands fa-linkedin"></i>
+
+                <h3>LinkedIn</h3>
+
+                <a
+                    href="https://www.linkedin.com/in/tanya-kumari-43718337a/"
+                    target="_blank">
+
+                    Tanya Kumari
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FINAL CV BUTTONS -->
+
+        <div style="text-align:center; margin-top:20px;">
+
+            <!-- VIEW CV IMAGE -->
+
+            <a
+                href="images/Tanya_Kumari_CV.jpg"
+                target="_blank"
+                class="btn btn-outline">
+
+                <i class="fa-solid fa-eye"></i>
+
+                View My CV
+
+            </a>
+
+
+            <!-- DOWNLOAD CV IMAGE -->
+
+            <a
+                href="images/Tanya_Kumari_CV.jpg"
+                download="Tanya_Kumari_CV.jpg"
+                class="btn btn-primary">
+
+                <i class="fa-solid fa-download"></i>
+
+                Download My CV
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026
+
+        <span>Tanya Kumari</span>
+
+        | All Rights Reserved.
+
+    </footer>
+
+
+    <!-- ================= IMAGE MODAL ================= -->
+
+    <div class="modal" id="imageModal">
+
+        <div class="modal-content">
+
+            <span
+                class="close"
+                onclick="closeImage()">
+
+                &times;
+
+            </span>
+
+            <img
+                id="modalImage"
+                src=""
+                alt="Image Preview">
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        /* OPEN IMAGE */
+
+        function openImage(imagePath) {
+
+            document
+                .getElementById("imageModal")
+                .style.display = "flex";
+
+            document
+                .getElementById("modalImage")
+                .src = imagePath;
+
+        }
+
+
+        /* CLOSE IMAGE */
+
+        function closeImage() {
+
+            document
+                .getElementById("imageModal")
+                .style.display = "none";
+
+        }
+
+
+        /* CLOSE WHEN CLICKING OUTSIDE */
+
+        window.onclick = function(event) {
+
+            const modal =
+                document.getElementById("imageModal");
+
+            if (event.target === modal) {
+
+                closeImage();
+
+            }
+
+        };
+
+
+        /* CONTACT FORM */
+
+        function sendMessage(event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value;
+
+            const email =
+                document.getElementById("email").value;
+
+            const subject =
+                document.getElementById("subject").value;
+
+            const message =
+                document.getElementById("message").value;
+
+
+            const mailSubject =
+                encodeURIComponent(subject);
+
+
+            const mailBody =
+                encodeURIComponent(
+
+                    "Name: " + name +
+
+                    "\nEmail: " + email +
+
+                    "\n\nMessage:\n" +
+
+                    message
+
+                );
+
+
+            window.location.href =
+
+                "mailto:t6872964@gmail.com?subject=" +
+
+                mailSubject +
+
+                "&body=" +
+
+                mailBody;
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
